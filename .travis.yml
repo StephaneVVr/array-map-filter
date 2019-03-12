@@ -1,4 +1,4 @@
-script: ./tester map
+script: ./enable map 
 
 language: node_js
 node_js:
