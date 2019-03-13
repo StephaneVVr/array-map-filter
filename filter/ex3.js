@@ -24,6 +24,13 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+  return names.filter((name) => {
+    let nameCopy = name.split(' ');
+    let result = nameCopy[1] === 'Stark';
+    return result;
+
+
+  })
 }
 
 // Ne pas modifier l'export
