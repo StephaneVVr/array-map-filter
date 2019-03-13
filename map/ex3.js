@@ -60,6 +60,41 @@ En sortie:
  */
 
 function getMoviesFreshness(movies) {
+  return movies.map((theMovies, i) => {
+    if (theMovies.rating < 60){
+        Object.defineProperty(theMovies, "label",{
+          value : 'rotten',
+          writable : true,
+          enumerable : true,
+          configurable : true
+        })
+    } 
+    
+    else if (theMovies.rating >= 60 && theMovies.rating <= 75){
+      Object.defineProperty(theMovies, "label",{
+        value : 'fresh',
+        writable : true,
+        enumerable : true,
+        configurable : true
+
+    })
+  } 
+    
+    else {
+        Object.defineProperty(theMovies, "label",{
+          value : 'certified fresh',
+          writable : true,
+          enumerable : true,
+          configurable : true
+        })
+    }
+
+    return theMovies;
+
+  }
+  
+  
+  )
 }
 
 
