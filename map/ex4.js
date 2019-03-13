@@ -52,6 +52,32 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
+
+  
+  return radiuses.map((theRadius, i) => {
+
+    let obj = {};
+    obj.radius = theRadius;
+
+    let circum = 2 * Math.PI * obj.radius;
+    let surf = Math.PI * obj.radius * obj.radius
+
+    Object.defineProperty(obj, "circumference",{
+      value : circum.toFixed(3),
+      writable : true,
+      enumerable : true,
+      configurable : true
+    })
+
+    Object.defineProperty(obj, "surface",{
+      value : surf.toFixed(3),
+      writable : true,
+      enumerable : true,
+      configurable : true
+    })
+
+    return obj;
+  })
 }
 
 
