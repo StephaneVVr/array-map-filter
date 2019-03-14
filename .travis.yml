@@ -1,4 +1,4 @@
-script: ./enableAll
+script: npm test
 
 language: node_js
 node_js:
