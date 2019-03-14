@@ -1,4 +1,4 @@
-script: ./enable map filter filter-map 
+script: ./enableAll
 
 language: node_js
 node_js:
