@@ -26,7 +26,24 @@ Sortie attendue:
 
 */
 
+
+
 function filterOffensiveComments(comments, bannedWords) {
+  
+  return comments.filter((comment, i) => {
+    let banned = ['bloody', 'damn']
+    
+    if (comment.toLowerCase().includes(banned[0])){
+} else if (comment.toLowerCase().includes(banned[1])){
+
+}
+else {
+  return comment;
+}
+    
+    
+    
+  })
 }
 
 // Ne pas modifier l'export
